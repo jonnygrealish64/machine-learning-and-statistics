@@ -72,6 +72,7 @@ Include a Jupyter notebook called scipy-stats.ipynb that contains the following:
 References:
 https://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/
 https://www.tutorialspoint.com/scikit_learn/index.htm
+https://www.tutorialspoint.com/scikit_learn/scikit_learn_decision_trees.htm
 https://www.analyticsvidhya.com/blog/2015/01/scikit-learn-python-machine-learning-tool/
 https://medium.com/analytics-vidhya/most-used-scikit-learn-algorithms-part-1-snehit-vaddi-7ec0c98e4edd
 https://scikit-learn.org/stable/supervised_learning.html
