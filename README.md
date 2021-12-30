@@ -28,22 +28,15 @@ DTs learn from the data to approximate a sine curve with a set of simple decisio
 
 Advantages of Decision Trees:
     DTs are simple and straightforward to understand and interpret, as DTs can be visualised.
-
     DTs requires little data preparation, where other techniques often require data normalisation, dummy variables would need to be created and blank values also need to be removed.
-
     The cost of using DTs (predicting the data) is logarithmic in the number of data points used to train the DT.
-
     DTs are capable of handling multi-output problems.
-
     DTs use a white box model where if a given situation is observable, Boolean logic explains the observed condition. In contrast to a black box model, results may be more difficult to interpret.
 
 Disadvantages of Decision Trees:
     DT learners can create overly complex trees that do not generalise the dataset very well, known as overfitting. Overfitting can only be avoided by the use of mechanisms such as DT pruning, setting the maximum depth of the tree and setting the minimum number of samples required at a leaf node.
-
     DTs can be unstable due to small variations in the dataset, which can potentially result in a completely unexpected DT being generated.
-
     The predictions of DTs are seen as neither smooth nor continuous, so these are not suitable for data extrapolation.
-
     There are concepts such as parity in DTs which DTs don't express easily.
 
 Decision Tree Implementation:
@@ -59,9 +52,23 @@ As an alternative to outputting this specific class, the probability of each cla
 DecisionTreeClassifier() is capable of both binary classification (where labels are [-1, 1]) and multiclass classification (where labels are [0, …, K-1]).
 Using the Iris dataset, we can construct a Decision Tree.
 Once trained with the Iris dataset, a Decision Tree can be plotted via the plot_tree() function.
-The Decision Tree can be exported via Graphviz exporter, export_graphviz, and saved into an external pdf file.
-The export_graphviz exporter is capable of a variety of aesthetic options, including colouring nodes by their class or value for regression, using explicit variable and class names. The plots are automatically modified within Jupyter notebooks.
-The Decision Tree can also be exported in textual format via the export_text() function.
+
+#2: Clustering/Biclustering:
+The cluster library in scikit-learn can be used to bring unlabelled data together.
+There are numerous clustering algorithms available in scikit-learn, such as K-Means, Affinity propagation and mean-shift.
+Each algorithm has two variants:
+class, which uses the fit() function to learn about the clusters on train data
+function, this returns an array of integer labels from the cluster data.
+
+#3: Manifold Learning
+A manifold is a 2D shape that can be altered to fit into a 3D space, this can be achieved via twisting and bending it.
+Data mainly lies on 2D manifolds, existing in a 3D space.
+Manifold learning is the term and the process of modelling data in a 3D space.
+An algorithm used in Manifold Learning is Locally Linear Embedding (LLE), this produces 2D embedding of input data.
+For each instance, LLE finds its closest neighbouring value and expresses both as a linear function.
+If there are x instances, the LLE algorithm attempts to find the set of weights, w, this attempts to minimise the distance there is between x and linear functions, and each 3D instance of x is mapped to a vector y.
+In the scikit-learn Jupyter notebook, we will look at the Swiss Roll dataset and analyse this via Manifold Learning.
+Locally Linear Embedding (LLE) is compared with PCA (Principle Component Analysis) and t-SNE(t-distributed Stochastic Neighbor Embedding) in the code.
 
 Scipy-Stats Jupyter Notebook (40%):
 Include a Jupyter notebook called scipy-stats.ipynb that contains the following:
@@ -70,13 +77,18 @@ Include a Jupyter notebook called scipy-stats.ipynb that contains the following:
 10%: Appropriate plots and other visualisations to enhance your notebook for viewers.
 
 References:
+https://scikit-learn.org/stable/modules/generated/sklearn.tree.export_graphviz.html
 https://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/
+https://towardsdatascience.com/an-overview-of-the-scikit-learn-clustering-package-d39a0499814
 https://www.tutorialspoint.com/scikit_learn/index.htm
 https://www.tutorialspoint.com/scikit_learn/scikit_learn_decision_trees.htm
 https://www.analyticsvidhya.com/blog/2015/01/scikit-learn-python-machine-learning-tool/
 https://medium.com/analytics-vidhya/most-used-scikit-learn-algorithms-part-1-snehit-vaddi-7ec0c98e4edd
+https://stackabuse.com/hierarchical-clustering-with-python-and-scikit-learn/
 https://scikit-learn.org/stable/supervised_learning.html
 https://scikit-learn.org/stable/modules/tree.html
 https://scikit-learn.org/stable/unsupervised_learning.html
 https://scikit-learn.org/stable/modules/clustering.html
 https://scikit-learn.org/stable/modules/biclustering.html
+https://scikit-learn.org/stable/modules/manifold.html
+https://www.analyticsvidhya.com/blog/2021/02/a-quick-introduction-to-manifold-learning/
